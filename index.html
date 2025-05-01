@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de IQ Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Evalúa tu IQ con nuestro test científico">
+</head>
+<body>
+    <div class="container">
+        <!-- Portada -->
+        <section id="start-screen" class="screen active">
+            <h1>Test de IQ</h1>
+            <p>Responde 15 preguntas de lógica, matemáticas y patrones para obtener tu puntuación estimada.</p>
+            <button id="start-btn" class="btn">Comenzar Test</button>
+        </section>
+
+        <!-- Test -->
+        <section id="test-screen" class="screen">
+            <div class="progress-bar">
+                <span id="progress">Pregunta 1/15</span>
+                <div class="bar"><div id="progress-fill"></div></div>
+            </div>
+            <div class="timer" id="timer">30</div>
+            <div id="question-container">
+                <h2 id="question"></h2>
+                <div id="options" class="options"></div>
+            </div>
+            <button id="next-btn" class="btn" disabled>Siguiente</button>
+        </section>
+
+        <!-- Resultados -->
+        <section id="result-screen" class="screen">
+            <h2>Tu Resultado</h2>
+            <div class="score-container">
+                <div class="iq-score" id="iq-score">120</div>
+                <p id="iq-category" class="iq-category">Superior al promedio</p>
+            </div>
+            <canvas id="iq-chart" width="400" height="200"></canvas>
+            <p id="iq-description"></p>
+            <button id="retry-btn" class="btn">Reintentar</button>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
